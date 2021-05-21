@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/d9-quiz/websites/tw2-01/static/css/main.ee31270e.chunk.css",
-    "main.js": "/d9-quiz/websites/tw2-01/static/js/main.8d9a88d4.chunk.js",
-    "main.js.map": "/d9-quiz/websites/tw2-01/static/js/main.8d9a88d4.chunk.js.map",
-    "runtime-main.js": "/d9-quiz/websites/tw2-01/static/js/runtime-main.40af27f7.js",
-    "runtime-main.js.map": "/d9-quiz/websites/tw2-01/static/js/runtime-main.40af27f7.js.map",
-    "static/js/2.03e6afe9.chunk.js": "/d9-quiz/websites/tw2-01/static/js/2.03e6afe9.chunk.js",
-    "static/js/2.03e6afe9.chunk.js.map": "/d9-quiz/websites/tw2-01/static/js/2.03e6afe9.chunk.js.map",
-    "static/js/3.f5ac2d2d.chunk.js": "/d9-quiz/websites/tw2-01/static/js/3.f5ac2d2d.chunk.js",
-    "static/js/3.f5ac2d2d.chunk.js.map": "/d9-quiz/websites/tw2-01/static/js/3.f5ac2d2d.chunk.js.map",
-    "index.html": "/d9-quiz/websites/tw2-01/index.html",
-    "static/css/main.ee31270e.chunk.css.map": "/d9-quiz/websites/tw2-01/static/css/main.ee31270e.chunk.css.map",
-    "static/js/2.03e6afe9.chunk.js.LICENSE.txt": "/d9-quiz/websites/tw2-01/static/js/2.03e6afe9.chunk.js.LICENSE.txt"
+    "main.css": "/d9-quiz/react-js/tw2-01/static/css/main.ee31270e.chunk.css",
+    "main.js": "/d9-quiz/react-js/tw2-01/static/js/main.8d9a88d4.chunk.js",
+    "main.js.map": "/d9-quiz/react-js/tw2-01/static/js/main.8d9a88d4.chunk.js.map",
+    "runtime-main.js": "/d9-quiz/react-js/tw2-01/static/js/runtime-main.69844777.js",
+    "runtime-main.js.map": "/d9-quiz/react-js/tw2-01/static/js/runtime-main.69844777.js.map",
+    "static/js/2.03e6afe9.chunk.js": "/d9-quiz/react-js/tw2-01/static/js/2.03e6afe9.chunk.js",
+    "static/js/2.03e6afe9.chunk.js.map": "/d9-quiz/react-js/tw2-01/static/js/2.03e6afe9.chunk.js.map",
+    "static/js/3.f5ac2d2d.chunk.js": "/d9-quiz/react-js/tw2-01/static/js/3.f5ac2d2d.chunk.js",
+    "static/js/3.f5ac2d2d.chunk.js.map": "/d9-quiz/react-js/tw2-01/static/js/3.f5ac2d2d.chunk.js.map",
+    "index.html": "/d9-quiz/react-js/tw2-01/index.html",
+    "static/css/main.ee31270e.chunk.css.map": "/d9-quiz/react-js/tw2-01/static/css/main.ee31270e.chunk.css.map",
+    "static/js/2.03e6afe9.chunk.js.LICENSE.txt": "/d9-quiz/react-js/tw2-01/static/js/2.03e6afe9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.40af27f7.js",
+    "static/js/runtime-main.69844777.js",
     "static/js/2.03e6afe9.chunk.js",
     "static/css/main.ee31270e.chunk.css",
     "static/js/main.8d9a88d4.chunk.js"
