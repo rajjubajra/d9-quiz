@@ -1,10 +1,12 @@
-
+import {Provider} from 'react-redux';
+import {store} from './Redux/store';
+import Router from './Router';
 
 function App() {
   return (
-    <div className="bg-gray-200">
-      <h1 className="text-6xl">d9 Quiz </h1>
-    </div>
+    <Provider store={store}>
+      <Router />
+    </Provider>
   );
 }
 
