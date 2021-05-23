@@ -1,0 +1,20 @@
+[
+  {
+    "key": "standard.front_page",
+    "title": "Home",
+    "description": "",
+    "uri": "",
+    "alias": "",
+    "external": false,
+    "absolute": "https://yellow-website.com/d9-quiz/",
+    "relative": "/d9-quiz/",
+    "existing": true,
+    "weight": "0",
+    "expanded": false,
+    "enabled": true,
+    "uuid": null,
+    "options": [
+      
+    ]
+  }
+]
