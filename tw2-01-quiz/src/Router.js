@@ -1,13 +1,13 @@
 import {useEffect} from 'react';
 import {useDispatch} from 'react-redux';
-import {actionMainNav} from './Redux/Action';
+import {actionAll} from './Redux/Action';
 
 function Router() {
 
   const dispatch = useDispatch();
 
   useEffect(()=>{
-    dispatch(actionMainNav());
+    dispatch(actionAll());
   })
 
   return (

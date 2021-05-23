@@ -39,35 +39,35 @@ export const reducerMainNav = (state = initalStateNav, action) => {
 
 }
 
-/** HOMEPAGE */
-const initialStateHome = {
- home_fetching: false,
- home_fetched: false,
- home_fetch_error: '',
- home_data: [],
- home_dataLength: 0
+/** MULTIPLE CHOICE QUESTION */
+const initialStateMultipleChoice = {
+ multiple_choice_fetching: false,
+ multiple_choice_fetched: false,
+ multiple_choice_fetch_error: '',
+ multiple_choice_data: [],
+ multiple_choice_dataLength: 0
 }
 
-export const reducerHomePage = (state = initialStateHome, action) => {
+export const reducerMultipleChoice = (state = initialStateMultipleChoice, action) => {
   
   switch(action.type){
 
-    case actionTypes.HOME_START_FETCHING:
+    case actionTypes.MULTIPLE_CHOICE_START_FETCHING:
       return {
-        fetching: true,
-        home_data: []
+        multiple_choice_fetching: true,
+        multiple_choice_data: []
       }
-    case actionTypes.HOME_FETCHED:
+    case actionTypes.MULTIPLE_CHOICE_FETCHED:
       return {
-        home_data: action.data,
-        home_fetched: true,
-        home_dataLength: action.data.length
+        multiple_choice_data: action.data,
+        multiple_choice_fetched: true,
+        multiple_choice_dataLength: action.data.length
       }
-    case actionTypes.HOME_FETCH_ERROR:
+    case actionTypes.MULTIPLE_CHOICE_FETCH_ERROR:
       return {
-        home_fetched: false,
-        home_fetching: false,
-        home_fetch_error: action.error
+        multiple_choice_fetched: false,
+        multiple_choice_fetching: false,
+        multiple_choice_fetch_error: action.error
       }
       /** default state */
       default:

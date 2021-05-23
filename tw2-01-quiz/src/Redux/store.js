@@ -3,6 +3,7 @@ import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
 import {
   reducerMainNav, 
+  reducerMultipleChoice
   
 } from './Reducer';
 
@@ -10,6 +11,7 @@ const reducer = combineReducers(
   {
     // reducerFetchData,
     reducerMainNav,
+    reducerMultipleChoice
   }
 );
 

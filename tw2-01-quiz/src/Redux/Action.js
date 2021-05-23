@@ -1,9 +1,9 @@
 import {actionTypes} from './ActionTypes';
-import axios from "axios"
+import axios from "axios";
 import { baseurl } from '../config/baseurl';
 
 
-export const actionMainNav = () => {
+export const actionAll = () => {
  
   const headers = {
     headers: {
@@ -33,38 +33,20 @@ export const actionMainNav = () => {
                     : NavRemote;
 
   /** MULTIPLE CHOICE QUIZ */
-  const HomeLocal = './data/homepage.json';
-  const HomeRemote = `${baseurl.URL}/rest/multiple-choice-question`;
-  const HOME = window.location.origin === 'http://localhost:3000' 
-                    ? HomeLocal
-                    : HomeRemote;
+  const MultipleChoiceLocal = './data/multipleChoice.json';
+  const MultipleChoiceRemote = `${baseurl.URL}/rest/multiple-choice-question`;
+  const MultipleChoice = window.location.origin === 'http://localhost:3000' 
+                    ? MultipleChoiceLocal
+                    : MultipleChoiceRemote;
 
 
   /** ABOUT PAGE */
-  const AboutLocal = './data/aboutpage.json';
-  const AboutRemote = `${baseurl.URL}/rest/about`;
-  const ABOUT = window.location.origin === 'http://localhost:3000' 
-                    ? AboutLocal
-                    : AboutRemote;
-  /** FOOD MENU */
-  const FoodMenuLocal = './data/foodMenu.json';
-  const FoodMenuRemote = `${baseurl.URL}/rest/food-menu`;
-  const FOODMENU = window.location.origin === 'http://localhost:3000' 
-                    ? FoodMenuLocal
-                    : FoodMenuRemote;
-  /** FOOD MENU TAXANOMY TERMS */
-  const FoodMenuTxnTermLocal = './data/foodMenuTxnTerm.json';
-  const FoodMenuTxnTermRemote = `${baseurl.URL}/rest/food-menu-taxanomy`;
-  const FOODMENU_TXN_TERM = window.location.origin === 'http://localhost:3000' 
-                    ? FoodMenuTxnTermLocal
-                    : FoodMenuTxnTermRemote;
+  // const AboutLocal = './data/aboutpage.json';
+  // const AboutRemote = `${baseurl.URL}/rest/about`;
+  // const ABOUT = window.location.origin === 'http://localhost:3000' 
+  //                   ? AboutLocal
+  //                   : AboutRemote;
   
-  /** FOOD MENU BACKGROUND IMAGE */
-  const FoodMenuBGLocal = './data/foodMenuBG.json';
-  const FoodMenuBGRemote = `${baseurl.URL}/rest/food-menu-bg-image`;
-  const FOODMENU_BG = window.location.origin === 'http://localhost:3000' 
-                    ? FoodMenuBGLocal
-                    : FoodMenuBGRemote;
 
 
   return function (dispatch) {
@@ -90,107 +72,48 @@ export const actionMainNav = () => {
       })
 
 
-    /** HOMEPAGE */
+    /** MULTIPLE CHOICE QUESTION */
     dispatch({
-      type: actionTypes.HOME_START_FETCHING
+      type: actionTypes.MULTIPLE_CHOICE_START_FETCHING
     })
-    const reqHome = axios.get(HOME, headers)
-    reqHome.then((res) => {
+    const reqMUL_CHO = axios.get(MultipleChoice, headers)
+    reqMUL_CHO.then((res) => {
         //console.log("action",res.data)
         dispatch({
-          type: actionTypes.HOME_FETCHED,
+          type: actionTypes.MULTIPLE_CHOICE_FETCHED,
           data: res.data
         })
       })
       .catch(err => {
         dispatch({
-          type: actionTypes.HOME_FETCH_ERROR,
+          type: actionTypes.MULTIPLE_CHOICE_FETCH_ERROR,
           fetched: false,
           error: err
         })
       })
 
 
-    /** ABOUT PAGE */
-    dispatch({
-      type: actionTypes.ABOUT_START_FETCHING
-    })
-    const reqAbout = axios.get(ABOUT, headers)
-    reqAbout.then((res) => {
-       // console.log("action",res.data)
-        dispatch({
-          type: actionTypes.ABOUT_FETCHED,
-          data: res.data
-        })
-      })
-      .catch(err => {
-        dispatch({
-          type: actionTypes.ABOUT_FETCH_ERROR,
-          fetched: false,
-          error: err
-        })
-      })
+    // /** ABOUT PAGE */
+    // dispatch({
+    //   type: actionTypes.ABOUT_START_FETCHING
+    // })
+    // const reqAbout = axios.get(ABOUT, headers)
+    // reqAbout.then((res) => {
+    //    // console.log("action",res.data)
+    //     dispatch({
+    //       type: actionTypes.ABOUT_FETCHED,
+    //       data: res.data
+    //     })
+    //   })
+    //   .catch(err => {
+    //     dispatch({
+    //       type: actionTypes.ABOUT_FETCH_ERROR,
+    //       fetched: false,
+    //       error: err
+    //     })
+    //   })
 
-    /** FOOD-MENU PAGE */
-    dispatch({
-      type: actionTypes.FOOD_MENU_START_FETCHING
-    })
-    const reqFoodMenu = axios.get(FOODMENU, headers)
-    reqFoodMenu.then((res) => {
-        //console.log("action",res.data)
-        dispatch({
-          type: actionTypes.FOOD_MENU_FETCHED,
-          data: res.data
-        })
-      })
-      .catch(err => {
-        dispatch({
-          type: actionTypes.FOOD_MENU_FETCH_ERROR,
-          fetched: false,
-          error: err
-        })
-      })
-
-    /** FOOD-MENU - TAXANOMY TERSM */
-    dispatch({
-      type: actionTypes.FOOD_MENU_TXN_TERM_START_FETCHING
-    })
-    const reqFoodMenuTxtTerm = axios.get(FOODMENU_TXN_TERM, headers)
-    reqFoodMenuTxtTerm.then((response) => {
-        console.log("'taxanomy action",response.data)
-        dispatch({
-          type: actionTypes.FOOD_MENU_TXN_TERM_FETCHED,
-          data: response.data
-        })
-      })
-      .catch(err => {
-        dispatch({
-          type: actionTypes.FOOD_MENU_TXN_TERM_FETCH_ERROR,
-          fetched: false,
-          error: err
-        })
-      })
-
-
-      /** FOOD-MENU - BG */
-    dispatch({
-      type: actionTypes.FOOD_MENU_BG_START_FETCHING
-    })
-    const reqFoodMenuBG = axios.get(FOODMENU_BG, headers)
-    reqFoodMenuBG.then((response) => {
-        console.log("'taxanomy action",response.data)
-        dispatch({
-          type: actionTypes.FOOD_MENU_BG_FETCHED,
-          data: response.data
-        })
-      })
-      .catch(err => {
-        dispatch({
-          type: actionTypes.FOOD_MENU_BG_FETCH_ERROR,
-          fetched: false,
-          error: err
-        })
-      })
+    
 
 
 
