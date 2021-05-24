@@ -66,25 +66,14 @@ function MultipleChoice() {
       }
     }
     const node = {
-      type: [
-        {
-          target_id: 'article',
-          target_type: 'node_type'
-        }
-      ],
-      title: [
-        {
-          value: "This is title",
-        }
-      ],
-      body: [{
-        value: "This is test text for body contente",
-        format: 'plain_text'
-      }]
+      "headers": [{'Accept': 'application/vnd.api+json'}],
+      "type": [{"target_id": "article"}],
+      "title": [{"value": "This is title"}],
+      "body": [{"value": "This is test text for body contente"}]
     }
     await axios.post(`${baseurl.URL}/node`, node)
     .then(res => {
-      console.log(res.data)
+      console.log(res)
     })
     .catch(err => console.log(err))
 
