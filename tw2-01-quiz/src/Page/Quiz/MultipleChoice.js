@@ -66,7 +66,6 @@ function MultipleChoice() {
       }
     }
     const node = {
-      "headers": [{'Accept': 'application/vnd.api+json'}],
       "type": [{"target_id": "article"}],
       "title": [{"value": "This is title"}],
       "body": [{"value": "This is test text for body contente"}]
