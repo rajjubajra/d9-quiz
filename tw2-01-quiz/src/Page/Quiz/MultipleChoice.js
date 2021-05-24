@@ -68,7 +68,7 @@ function MultipleChoice() {
     const node = {
       type: [
         {
-          target_id: 'quiz_participants_test_data',
+          target_id: 'article',
           target_type: 'node_type'
         }
       ],
@@ -77,16 +77,10 @@ function MultipleChoice() {
           value: "This is title",
         }
       ],
-      field_node_id: [{
-        value: "100",
+      body: [{
+        value: "This is test text for body contente",
         format: 'plain_text'
-      }],
-      field_quiz_answer: [
-        {
-          value: "10",
-          format: 'plain_text'
-        }
-      ]
+      }]
     }
     axios.post(`${baseurl.URL}/node`, node)
     .then(res => {
