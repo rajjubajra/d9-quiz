@@ -90,7 +90,7 @@ function MultipleChoice() {
     }
     axios.post(`${baseurl.URL}/node`, node)
     .then(res => {
-      console.log(res)
+      console.log(res.data)
     })
     .catch(err => console.log(err))
 
