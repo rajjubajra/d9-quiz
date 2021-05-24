@@ -59,7 +59,7 @@ function MultipleChoice() {
     
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     const headers = {
       headers: {
       'Accept': 'application/vnd.api+json'
@@ -82,7 +82,7 @@ function MultipleChoice() {
         format: 'plain_text'
       }]
     }
-    axios.post(`${baseurl.URL}/node`, node)
+    await axios.post(`${baseurl.URL}/node`, node)
     .then(res => {
       console.log(res.data)
     })
