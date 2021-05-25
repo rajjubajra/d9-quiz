@@ -10,7 +10,7 @@ function Contact() {
     const message = {
       "webform_id" : "contact",
       "name" :[{"value": "Test" }],
-      "email" :[{"value": "test@gmail.com"}],
+      
       "subject" :[{"value": "123456789"}],
       "message" :[{"value": "Hello"}]
   }
