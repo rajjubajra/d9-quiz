@@ -15,7 +15,7 @@ function Contact() {
       'message' :[{'value': 'Hello'}]
   }
 
-  fetch(`${baseurl.URL}/entity/webform_submission?_format=json`, {
+  fetch(`${baseurl.URL}/webform_rest/submit`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
