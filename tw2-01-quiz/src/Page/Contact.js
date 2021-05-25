@@ -9,9 +9,10 @@ function Contact() {
   const handleSubmit = () => {
     console.log("webform contact handle submit");
     const message = {
-      "webform_id" : "contact",
+      type:{
+        "webform_id" : "contact"
+      },
       "name" :[{"value": "Test" }],
-      
       "subject" :[{"value": "123456789"}],
       "message" :[{"value": "Hello"}]
   }
