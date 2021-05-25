@@ -1,4 +1,5 @@
 
+import axios from 'axios';
 import React from 'react'
 import {baseurl} from '../config/baseurl';
 
@@ -15,13 +16,15 @@ function Contact() {
       "message" :[{"value": "Hello"}]
   }
 
-  fetch(`${baseurl.URL}/webform_rest/submit`, {
+  axios(`${baseurl.URL}/webform_rest/submit`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(message)
+    data: message
   })
+  .then(res=>console.log(res))
+  .catch(err=>console.log(err))
 
   }
 
