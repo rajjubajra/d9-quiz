@@ -20,7 +20,7 @@ function Contact() {
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(message)
+    body: message
   })
 
   }
