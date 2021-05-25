@@ -17,7 +17,6 @@ function MultipleChoice() {
   const data = useSelector(state => state.reducerMultipleChoice.multiple_choice_data);
   const [locData, setLocData] = useState([]);
   
-
   useEffect(()=>{
 
     const date = new Date();
@@ -40,7 +39,6 @@ function MultipleChoice() {
     localStorage.setItem("quiz", JSON.stringify(arr))
 
   },[data])
-
   
   //UPDATE QUIZ on localStorage onChange
   const handleChanage = (e) => {
@@ -55,8 +53,7 @@ function MultipleChoice() {
       return item;
     })
     localStorage.setItem("quiz", JSON.stringify(quiz))
-    setLocData(JSON.parse(localStorage.getItem('quiz')));
-    
+    setLocData(JSON.parse(localStorage.getItem('quiz')));  
   }
 
   const handleSubmit = () => {
@@ -67,19 +64,11 @@ function MultipleChoice() {
       headers: {
           'Accept': 'application/vnd.api+json',
           'Content-Type': 'application/json',
-        },  
+      },
       data: {
-        "type": [{
-          "target_id": "article",
-          "target_type": "node_type",
-        }],
-        "title": [{
-          "value": "TEST TITLE",
-        }],
-        "body": [{
-          "value": "TEST BODY CONTENT...",
-          "format": "plain_text",
-        }],
+        "target_id": "article",
+        "title": "TEST TITLE",
+        "body": "TEST BODY CONTENT...",
       }
     })
     .then(res => console.log(res))
@@ -91,7 +80,6 @@ function MultipleChoice() {
 
   console.log(locData);
   localStorage.setItem("locData", JSON.stringify(locData));
-
 
   return (
     <div>
