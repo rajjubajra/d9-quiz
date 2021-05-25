@@ -70,13 +70,28 @@ function MultipleChoice() {
       "title": [{"value": "This is title"}],
       "body": [{"value": "This is test text for body contente"}]
     }
-    await axios.post(`${baseurl.URL}/node`, node)
-    .then(res => {
-      console.log(res)
+    await axios({
+      method: 'post',
+      url: `${baseurl.URL}/node`,
+      data: {
+        type: [{
+          target_id: 'article',
+          target_type: 'node_type',
+        }],
+        title: [{
+          value: "TEST TITLE",
+        }],
+        body: [{
+          value: "TEST BODY CONTENT...",
+          format: 'plain_text',
+        }],
+      }
     })
+    .then(res => console.log(res))
     .catch(err => console.log(err))
 
     console.log("handle submited");
+    
   }
 
   console.log(locData);

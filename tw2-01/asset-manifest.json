@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/d9-quiz/react-js/tw2-01/static/css/main.9209ea0f.chunk.css",
-    "main.js": "/d9-quiz/react-js/tw2-01/static/js/main.88b9c04f.chunk.js",
-    "main.js.map": "/d9-quiz/react-js/tw2-01/static/js/main.88b9c04f.chunk.js.map",
+    "main.js": "/d9-quiz/react-js/tw2-01/static/js/main.32b8f0c2.chunk.js",
+    "main.js.map": "/d9-quiz/react-js/tw2-01/static/js/main.32b8f0c2.chunk.js.map",
     "runtime-main.js": "/d9-quiz/react-js/tw2-01/static/js/runtime-main.eb139940.js",
     "runtime-main.js.map": "/d9-quiz/react-js/tw2-01/static/js/runtime-main.eb139940.js.map",
     "static/js/2.563136dd.chunk.js": "/d9-quiz/react-js/tw2-01/static/js/2.563136dd.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.eb139940.js",
     "static/js/2.563136dd.chunk.js",
     "static/css/main.9209ea0f.chunk.css",
-    "static/js/main.88b9c04f.chunk.js"
+    "static/js/main.32b8f0c2.chunk.js"
   ]
 }
