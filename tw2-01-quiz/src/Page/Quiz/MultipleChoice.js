@@ -64,20 +64,21 @@ function MultipleChoice() {
     axios({
       method: 'post',
       url: `${baseurl.URL}/node`,
-      type: [{
-          target_id: 'article',
-          target_type: 'node_type',
-        }],
       headers: {
-          'Accept': 'application/vnd.api+json'
+          'Accept': 'application/vnd.api+json',
+          'Content-Type': 'application/json',
         },  
       data: {
-        title: [{
-          value: "TEST TITLE",
+        "type": [{
+          "target_id": "article",
+          "target_type": "node_type",
         }],
-        body: [{
-          value: "TEST BODY CONTENT...",
-          format: 'plain_text',
+        "title": [{
+          "value": "TEST TITLE",
+        }],
+        "body": [{
+          "value": "TEST BODY CONTENT...",
+          "format": "plain_text",
         }],
       }
     })
