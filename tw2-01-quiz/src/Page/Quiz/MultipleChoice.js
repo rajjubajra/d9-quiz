@@ -59,9 +59,9 @@ function MultipleChoice() {
     
   }
 
-  const handleSubmit = async () => {
-   
-    await axios({
+  const handleSubmit = () => {
+  
+    axios({
       method: 'post',
       url: `${baseurl.URL}/node`,
       type: [{
@@ -72,7 +72,6 @@ function MultipleChoice() {
           'Accept': 'application/vnd.api+json'
         },  
       data: {
-        
         title: [{
           value: "TEST TITLE",
         }],
