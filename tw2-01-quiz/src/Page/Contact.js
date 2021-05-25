@@ -8,11 +8,11 @@ function Contact() {
   const handleSubmit = () => {
     console.log("webform contact handle submit");
     const message = {
-      'webform_id' : 'contact',
-      'name' :[{'value': 'Test' }],
-      'email' :[{'value': 'test@gmail.com'}],
-      'subject' :[{'value': '123456789'}],
-      'message' :[{'value': 'Hello'}]
+      "webform_id" : "contact",
+      "name" :[{"value": "Test" }],
+      "email" :[{"value": "test@gmail.com"}],
+      "subject" :[{"value": "123456789"}],
+      "message" :[{"value": "Hello"}]
   }
 
   fetch(`${baseurl.URL}/webform_rest/submit`, {
