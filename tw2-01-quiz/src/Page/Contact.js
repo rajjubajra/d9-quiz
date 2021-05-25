@@ -10,9 +10,9 @@ function Contact() {
     console.log("webform contact handle submit");
     const message = {
       "webform_id" : "contact",
-      "name" :[{"value": "Test" }],
-      "subject" :[{"value": "123456789"}],
-      "message" :[{"value": "Hello"}]
+      "name" : "Test",
+      "subject" : "123456789",
+      "message" : "Hello"
   }
 
   axios(`${baseurl.URL}/webform_rest/submit?_format=json`, {
