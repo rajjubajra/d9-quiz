@@ -60,24 +60,19 @@ function MultipleChoice() {
   }
 
   const handleSubmit = async () => {
-    const headers = {
-      headers: {
-      'Accept': 'application/vnd.api+json'
-      }
-    }
-    const node = {
-      "type": [{"target_id": "article"}],
-      "title": [{"value": "This is title"}],
-      "body": [{"value": "This is test text for body contente"}]
-    }
+   
     await axios({
       method: 'post',
       url: `${baseurl.URL}/node`,
-      data: {
-        type: [{
+      type: [{
           target_id: 'article',
           target_type: 'node_type',
         }],
+      headers: {
+          'Accept': 'application/vnd.api+json'
+        },  
+      data: {
+        
         title: [{
           value: "TEST TITLE",
         }],
@@ -91,7 +86,7 @@ function MultipleChoice() {
     .catch(err => console.log(err))
 
     console.log("handle submited");
-    
+
   }
 
   console.log(locData);
