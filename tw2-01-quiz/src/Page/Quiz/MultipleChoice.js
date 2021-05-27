@@ -76,7 +76,7 @@ function MultipleChoice() {
     };
   
 
-    const url = `${baseurl.URL}/jsonapi/node/article`;
+    const url = `${baseurl.URL}/jsonapi/node/article?_format=api_json`;
     axios.post(url,{data: node})
     .then(res=>console.log(res.data))
     .catch(err=>console.log(err))
