@@ -60,13 +60,13 @@ function MultipleChoice() {
   
     axios({
       method: 'post',
-      url: `${baseurl.URL}/jsonapi/node/article?_fromat=json`,
+      url: `${baseurl.URL}/node?_fromat=json`,
       headers: {
           'Accept': 'application/vnd.api+json',
           'Content-Type':'application/vnd.api+json',
       },
       "data": {
-          "type": "node--article",
+          "type": "article",
           "attributes": {
             "title": "My custom title",
             "body": {
