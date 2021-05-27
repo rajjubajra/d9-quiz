@@ -60,12 +60,10 @@ function MultipleChoice() {
 
     const data = {
       "type": "node--article",
-      "attributes": {
-        "title": {"value":"My custom title"},
-        "body": {"value": "Custom value",
-                "format": "plain_text"
-                }
-      }
+      "title": {"value":"My custom title"},
+      "body": {"value": "Custom value",
+                "format": "plain_text"}
+      
     }
 
     let node = {
