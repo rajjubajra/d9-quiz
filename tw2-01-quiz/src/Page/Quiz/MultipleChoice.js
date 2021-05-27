@@ -60,22 +60,26 @@ function MultipleChoice() {
   
     axios({
       method: 'post',
-      url: `${baseurl.URL}/node`,
+      url: `${baseurl.URL}/jsonapi/node/article`,
       headers: {
           'Accept': 'application/vnd.api+json',
-          'Content-Type': 'application/json',
+          'Content-Type':'application/vnd.api+json',
       },
-      data: {
-        "target_id": "article",
-        "title": "TEST TITLE",
-        "body": "TEST BODY CONTENT...",
-      }
+      "data": {
+          "type": "node--article",
+          "attributes": {
+            "title": "My custom title",
+            "body": {
+              "value": "Custom value",
+              "format": "plain_text"
+            }
+          }
+        }
     })
     .then(res => console.log(res))
     .catch(err => console.log(err))
 
     console.log("handle submited");
-
   }
 
   console.log(locData);
