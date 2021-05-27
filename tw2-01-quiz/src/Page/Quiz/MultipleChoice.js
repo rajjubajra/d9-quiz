@@ -62,10 +62,9 @@ function MultipleChoice() {
       "type": "node--article",
       "attributes": {
         "title": {"value":"My custom title"},
-        "body": {
-          "value": "Custom value",
-          "format": "plain_text"
-        }
+        "body": {"value": "Custom value",
+                "format": "plain_text"
+                }
       }
     }
 
@@ -74,7 +73,7 @@ function MultipleChoice() {
         'Accept': 'application/vnd.api+json',
         'Content-type': 'application/vnd.api+json'
       },
-      "data": JSON.stringify(data)
+      "data": data
     };
   
 
