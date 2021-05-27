@@ -59,9 +59,16 @@ function MultipleChoice() {
   const handleSubmit = () => {
 
     const data = {
-      "type": "node--article",
-      "title": {"value":"My custom title","format": "plain_text"},
-      "body": {"value": "Custom value","format": "plain_text"}
+      
+        "type": "node--article",
+        "attributes": {
+          "title": "My custom title",
+          "body": {
+            "value": "Custom value",
+            "format": "plain_text"
+          }
+        }
+      
       
     }
 
