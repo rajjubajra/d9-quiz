@@ -60,7 +60,7 @@ function MultipleChoice() {
   
     axios({
       method: 'post',
-      url: `${baseurl.URL}/node?_fromat=json`,
+      url: `${baseurl.URL}/node/article?_fromat=json`,
       headers: {
           'Accept': 'application/vnd.api+json',
           'Content-Type':'application/vnd.api+json',
