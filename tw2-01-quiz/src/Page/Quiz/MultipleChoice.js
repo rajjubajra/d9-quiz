@@ -68,7 +68,7 @@ function MultipleChoice() {
           'X-CSRF-Token': `${baseurl.URL}/session/token`
       },
       data: {
-          "target_id": "article",
+        
           "title": "My custom title updated",
           "body":"Custom value updated May 27th",              
       }
