@@ -74,10 +74,7 @@ function MultipleChoice() {
   
 
     const url = `${baseurl.URL}/node`;
-    axios.post(url,{
-      data: JSON.stringify(node),
-    }
-    )
+    axios.post(url,{data: node})
     .then(res=>console.log(res.data))
     .catch(err=>console.log(err))
 
