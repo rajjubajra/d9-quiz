@@ -75,10 +75,6 @@ function MultipleChoice() {
 
     const url = `${baseurl.URL}/node`;
     axios.post(url,{
-      headers: {
-        'Content-Type': 'application/hal+json',
-        'X-CSRF-Token': `${baseurl.URL}/session/token`
-      },
       data: JSON.stringify(node),
     }
     )
