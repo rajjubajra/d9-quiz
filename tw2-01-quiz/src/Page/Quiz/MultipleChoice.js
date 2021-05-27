@@ -58,23 +58,23 @@ function MultipleChoice() {
 
   const handleSubmit = () => {
 
-    
+    const data = {
+      "type": "node--article",
+      "attributes": {
+        "title": "My custom title",
+        "body": {
+          "value": "Custom value",
+          "format": "plain_text"
+        }
+      }
+    }
 
     let node = {
       headers: {
         'Accept': 'application/vnd.api+json',
         'Content-type': 'application/vnd.api+json'
       },
-      "data": {
-        "type": "node--article",
-        "attributes": {
-          "title": "My custom title",
-          "body": {
-            "value": "Custom value",
-            "format": "plain_text"
-          }
-        }
-      }
+      "data": JSON.stringify(data)
     };
   
 
