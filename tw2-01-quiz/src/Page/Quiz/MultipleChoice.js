@@ -58,7 +58,6 @@ function MultipleChoice() {
 
   const handleSubmit = () => {
 
-    const url = `${baseurl.URL}/node`
     let node = {
       type: [{
         target_id: 'article',
@@ -74,9 +73,17 @@ function MultipleChoice() {
     };
   
 
-    axios.post(url,node)
-    .then(res => console.log(res))
-    .catch(err => console.log(err))
+    axios({
+      url: `${baseurl.URL}/node`,
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/hal+json',
+        'X-CSRF-Token': `${baseurl.URL}/session/token`
+      },
+      data: JSON.stringify(node),
+    })
+    .then(res=>console.log(res.data))
+    .catch(err=>console.log(err))
 
     console.log("handle submited");
   }
