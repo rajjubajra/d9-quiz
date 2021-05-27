@@ -68,7 +68,7 @@ function MultipleChoice() {
 
     let node = {
       headers: {
-        'Content-type': 'application/vnd.api+json'
+        'Content-type': 'application/json'
       },
       "data": data
     };
