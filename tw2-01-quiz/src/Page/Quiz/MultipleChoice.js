@@ -59,8 +59,8 @@ function MultipleChoice() {
   const handleSubmit = () => {
   
     axios({
-      method: 'post',
-      url: `${baseurl.URL}/node/article?_fromat=json`,
+      method: 'PATCH',
+      url: `${baseurl.URL}/node/2`,
       headers: {
           'Accept': 'application/vnd.api+json',
           'Content-Type':'application/vnd.api+json',
@@ -68,9 +68,9 @@ function MultipleChoice() {
       "data": {
           "type": "article",
           "attributes": {
-            "title": "My custom title",
+            "title": "My custom title updated",
             "body": {
-              "value": "Custom value",
+              "value": "Custom value updated May 27th",
               "format": "plain_text"
             }
           }
