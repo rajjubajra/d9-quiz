@@ -61,7 +61,7 @@ function MultipleChoice() {
     const data = {
       "type": "node--article",
       "attributes": {
-        "title": "My custom title",
+        "title": {"value":"My custom title"},
         "body": {
           "value": "Custom value",
           "format": "plain_text"
