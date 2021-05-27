@@ -58,25 +58,21 @@ function MultipleChoice() {
 
   const handleSubmit = () => {
   
-    const csrf_token = `${baseurl.URL}/session/token`
+
     axios({
-      method: 'PATCH',
-      url: `${baseurl.URL}/node/2`,
+      method: 'POST',
+      url: `${baseurl.URL}/node`,
       headers: {
           'Accept': 'application/vnd.api+json',
           'Content-Type':'application/vnd.api+json',
-          'X-CSRF-Token': csrf_token
+          'X-CSRF-Token': `${baseurl.URL}/session/token`
       },
-      "data": {
-          "type": "article",
-          "attributes": {
-            "title": "My custom title updated",
-            "body": {
-              "value": "Custom value updated May 27th",
-              "format": "plain_text"
-            }
-          }
-        }
+      data: {
+          "target_id": "article",
+          "title": "My custom title updated",
+          "body":"Custom value updated May 27th",              
+      }
+  
     })
     .then(res => console.log(res))
     .catch(err => console.log(err))
