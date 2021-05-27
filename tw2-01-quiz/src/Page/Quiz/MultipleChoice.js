@@ -58,12 +58,14 @@ function MultipleChoice() {
 
   const handleSubmit = () => {
   
+    const csrf_token = `${baseurl.URL}/session/token`
     axios({
       method: 'PATCH',
       url: `${baseurl.URL}/node/2`,
       headers: {
           'Accept': 'application/vnd.api+json',
           'Content-Type':'application/vnd.api+json',
+          'X-CSRF-Token': csrf_token
       },
       "data": {
           "type": "article",
