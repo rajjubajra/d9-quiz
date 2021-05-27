@@ -60,8 +60,10 @@ function MultipleChoice() {
 
     let node = {
       headers: {
-        'Accept': 'application/vnd.api+json',
-        'Content-type': 'application/vnd.api+json'
+        'Accept': 'application/json',
+       'Content-type': 'application/json',
+        //'Accept': 'application/vnd.api+json',
+        //'Content-type': 'application/vnd.api+json'
       },
       "data": {
         "type": "node--article",
