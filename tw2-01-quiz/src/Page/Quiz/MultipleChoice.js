@@ -60,15 +60,14 @@ function MultipleChoice() {
 
     const data = {
       "type": "node--article",
-      "title": {"value":"My custom title"},
-      "body": {"value": "Custom value",
-                "format": "plain_text"}
+      "title": {"value":"My custom title","format": "plain_text"},
+      "body": {"value": "Custom value","format": "plain_text"}
       
     }
 
     let node = {
       headers: {
-        'Content-type': 'application/json'
+        'Content-type': 'application/vnd.api+json'
       },
       "data": data
     };
