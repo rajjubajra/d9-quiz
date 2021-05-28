@@ -65,7 +65,7 @@ function MultipleChoice() {
     }
 
     axios.post({
-      url:`${baseurl.URL}/node?_format=json`,
+      url:`${baseurl.URL}/node`,
       headers: {'Content-type': 'application/json'},
       method: 'POST',
       data: data
