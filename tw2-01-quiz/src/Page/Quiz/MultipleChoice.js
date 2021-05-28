@@ -75,7 +75,7 @@ function MultipleChoice() {
     axios.post({
       method: 'POST',
       data: data,
-      url:`${baseurl.URL}/node`,
+      url:`${baseurl.URL}/node?_format=json`,
     })
     .then(res=>console.log(res.data))
     .catch(err=>console.log(err))
