@@ -68,7 +68,7 @@ function MultipleChoice() {
       url:`${baseurl.URL}/node`,
       headers: {'Content-type': 'application/json'},
       method: 'POST',
-      data: data
+      data: JSON.stringify(data)
     })
     .then(res=>console.log(res.data))
     .catch(err=>console.log(err))
