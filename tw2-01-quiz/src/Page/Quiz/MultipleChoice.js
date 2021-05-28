@@ -59,9 +59,17 @@ function MultipleChoice() {
   const handleSubmit = () => {
 
     const data = {
-      "target_id":"article",
-      "value":"Example node title",
-      "body":"Custom value test body content"
+      type: [{
+        target_id: 'article',
+        target_type: 'node_type',
+      }],
+      title: [{
+        value: "data title",
+      }],
+      body: [{
+        value: "data body",
+        format: 'plain_text',
+      }],
     }
 
     axios.post({
