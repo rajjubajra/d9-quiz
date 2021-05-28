@@ -59,23 +59,25 @@ function MultipleChoice() {
   const handleSubmit = () => {
 
     const data = {
-      type: [{
-        target_id: 'article',
-        target_type: 'node_type',
+      "type": [{
+        "target_id": "article",
+        "target_type": "node_type",
       }],
-      title: [{
-        value: "data title",
+      "title": [{
+        "value": "data title",
       }],
-      body: [{
-        value: "data body",
-        format: 'plain_text',
+      "body": [{
+        "value": "data body",
+        "format": "plain_text",
       }],
     }
 
     axios.post({
       method: 'POST',
+      headers:{'Content-type': 'application/hal+json',
+      'X-CSRF-Token': `${baseurl.URL}/session/token`},
       data: data,
-      url:`${baseurl.URL}/node?_format=json`,
+      url:`${baseurl.URL}/node`,
     })
     .then(res=>console.log(res.data))
     .catch(err=>console.log(err))
@@ -94,14 +96,12 @@ function MultipleChoice() {
         data.map(item=>{
           return <div className="p-3" key={item.uuid}> 
             <div dangerouslySetInnerHTML={{__html: item.field_multiple_choice_questions}} />
-            
               <div className="flex p-3">
                 <div  dangerouslySetInnerHTML={{__html: item.field_option_one}} /> 
                 <input className="mt-2 ml-3" 
                 type="radio" 
                 name={item.nid} 
-                value="1" 
-                
+                value="1"
                 onChange={handleChanage}
                 />
               </div>
@@ -112,7 +112,6 @@ function MultipleChoice() {
                 name={item.nid} 
                 value="2" 
                 onChange={handleChanage}
-
                 />
               </div>
               <div className="flex p-3">
