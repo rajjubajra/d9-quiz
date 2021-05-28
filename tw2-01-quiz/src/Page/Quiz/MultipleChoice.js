@@ -60,9 +60,9 @@ function MultipleChoice() {
 
     const data = {
       
-      "type":{"target_id":"article"},
-      "title":{"value":"Example node title"},
-      "body": {"value":"Custom value test body content"}
+      "target_id":"article",
+      "value":"Example node title",
+      "body":"Custom value test body content"
 
     }
 
