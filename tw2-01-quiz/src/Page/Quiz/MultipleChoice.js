@@ -59,23 +59,17 @@ function MultipleChoice() {
   const handleSubmit = () => {
 
     const data = {
-      
       "target_id":"article",
       "value":"Example node title",
       "body":"Custom value test body content"
-
     }
 
-    let node = {
-      headers: {
-        'Content-type': 'application/json'
-      },
-      "data": JSON.stringify(data)
-    };
-  
-
-    const url = `${baseurl.URL}/node?_format=json`;
-    axios.post(url, node)
+    axios.post({
+      url:`${baseurl.URL}/node?_format=json`,
+      headers: {'Content-type': 'application/json'},
+      method: 'POST',
+      data: data
+    })
     .then(res=>console.log(res.data))
     .catch(err=>console.log(err))
 
