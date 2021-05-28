@@ -66,9 +66,9 @@ function MultipleChoice() {
 
     axios.post({
       url:`${baseurl.URL}/node`,
-      headers: {'Content-type': 'application/json'},
+      headers: {'X-CSRF-Token': `${baseurl.URL}/session/token`},
       method: 'POST',
-      data: JSON.stringify(data)
+      data: data
     })
     .then(res=>console.log(res.data))
     .catch(err=>console.log(err))
